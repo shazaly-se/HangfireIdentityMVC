@@ -1,0 +1,28 @@
+﻿@using CustomIdentity.ViewModel
+@model LoginVM
+<h3>Login</h3>
+<div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+</div>
+<form asp-action="Login" method="Post">
+  
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input type="email" class="form-control" asp-for="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input type="password" class="form-control" asp-for="Password">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" asp-for="RememberMe">
+        <label class="form-check-label" asp-for="RememberMe"></label>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}
