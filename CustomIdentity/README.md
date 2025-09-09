@@ -112,7 +112,7 @@ public class EmailSender : IEmailSender
     }
 }
 # 👤 Author
-Name: Your Shazaly
+Name:  Shazaly
 
 Contact: shazaly.se@gmail.com
 
